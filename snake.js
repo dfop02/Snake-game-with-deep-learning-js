@@ -87,8 +87,17 @@ function Snake() {
   this.tail = [];
 
   this.direction = function(x, y) {
-    this.xspeed = x;
-    this.yspeed = y;
+    // Block Snake to go behind
+    if ((this.xspeed != 0 && x != 0) && (x > this.xspeed || x < this.xspeed)) {
+      this.xspeed;
+      this.yspeed;
+    } else if ((this.yspeed != 0 && y != 0) && (y > this.yspeed || y < this.yspeed)) {
+      this.xspeed;
+      this.yspeed;
+    } else {
+      this.xspeed = x;
+      this.yspeed = y;
+    }
   }
 
   this.move = function() {
@@ -146,7 +155,7 @@ function Snake() {
       textSize(20);
       fill (255);
       textAlign(CENTER);
-      text("GAME OVER", 300, 300);      
+      text("GAME OVER", 300, 300);
     }
   }
 }
