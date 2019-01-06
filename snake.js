@@ -118,12 +118,14 @@ function Snake() {
     }
   }
 
-  this.death = function() {
+  this.death = function(reset=true) {
     for (var i = 0; i < this.tail.length; i++) {
       var distance = dist(this.x, this.y, this.tail[i].x, this.tail[i].y);
       if (distance < 1) {
         this.alive = false;
-        setTimeout(resetGame, 2000);
+        if (reset) {
+          setTimeout(resetGame, 2000);
+        }
       }
     }
   }
