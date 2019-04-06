@@ -2,10 +2,14 @@ var snakeSize = 20;
 var snake;
 var apple;
 var score;
+var ia;
+var highScore = 0;
 
 function setup() {
   createCanvas(600, 600);
   resetGame();
+  //ia = new NeuralNetwork();
+  //ia.initPopulation();
   frameRate(10);
 }
 
@@ -50,6 +54,9 @@ function Score(Snake) {
 
   this.getScore = function() {
     this.points = Snake.total - 1;
+    if (this.points > highScore) {
+      highScore = this.points;
+    }
   }
 
   this.render = function() {
@@ -58,6 +65,7 @@ function Score(Snake) {
     fill (255);
     textAlign(LEFT);
     text("SCORE: " + this.points, 20, 40);
+    text("HIGHSCORE: " + highScore, 430, 40);
   }
 }
 
