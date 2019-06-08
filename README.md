@@ -1,4 +1,4 @@
-# Snake-game-with-deep-learning-js
+# Snake Game With Deep Learning (js)
 A javascript snake game with deep learning application
 
 ### How Play?
