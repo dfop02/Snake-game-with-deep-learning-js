@@ -10,8 +10,7 @@ var graph = function(g) {
     g.textSize(20);
     g.fill (255);
     g.textAlign(LEFT);
-    g.text("SCORE: ", 20, 40);
-    g.text("HIGHSCORE: ", 430, 40);
+    g.text("GRAPHS COMMING SOON...", 20, 40);
   }
 }
 
