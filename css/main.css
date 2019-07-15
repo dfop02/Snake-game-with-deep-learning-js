@@ -1,0 +1,20 @@
+html, body {
+  height: 96%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#graph-game {
+  height: 600px;
+  margin-right: 1rem;
+}
